@@ -6,6 +6,7 @@ import { catchError, map, tap } from 'rxjs/operators';
 
 import { Material } from '../model/material';
 import { MessageService } from './message.service';
+import { Acabamento } from '../model/Acabamento';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })

@@ -13,6 +13,8 @@ import { AcabamentosComponent } from './acabamentos/acabamentos.component';
 import { CategoriasComponent } from './categorias/categorias.component';
 import { ItensComponent } from './itens/itens.component';
 import { ProdutoSearchComponent } from './produto-search/produto-search.component';
+import { DimensoesComponent } from './dimensoes/dimensoes.component';
+import { ItemDetailsComponent } from './item-details/item-details.component';
 
 @NgModule({
   imports: [
@@ -31,7 +33,9 @@ import { ProdutoSearchComponent } from './produto-search/produto-search.componen
     ProdutoDetailComponent,
     MessagesComponent,
     DashboardComponent,
-    ProdutoSearchComponent
+    ProdutoSearchComponent,
+    DimensoesComponent,
+    ItemDetailsComponent
   ],
   bootstrap: [ AppComponent ]
 })

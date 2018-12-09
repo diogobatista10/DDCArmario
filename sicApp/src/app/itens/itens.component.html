@@ -33,11 +33,10 @@
         <h2 class="display-2 text-center text-secondary">Itens </h2>
         <ul class="list-group list-group-flush" style="background-color: #a33f1f;">
           <li class="list-group-item" *ngFor="let item of itens" style="background-color: #a33f1f;">
-            <a class="list-group-item text-muted" routerLink="/detail/{{item.id}}">
+            <a class="list-group-item text-muted" routerLink="/itens/{{item.id}}">
               {{item.produto}}
               {{item.material}}
               {{item.acabamento}}
-              
             </a>
             <button class="btn-danger" title="delete item"
                     (click)="delete(item)">

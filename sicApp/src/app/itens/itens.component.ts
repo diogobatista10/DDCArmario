@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { Produto } from '../model/produto';
 import { ItemService } from '../services/item.service';
+
 import { Item } from '../model/item';
 @Component({
   selector: 'app-itens',
@@ -15,6 +16,7 @@ export class ItensComponent implements OnInit {
 
   ngOnInit() {
     this.getItens();
+ 
   }
 
   getItens(): void {

@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 
 import { Material } from '../model/material';
 import { MaterialService } from '../services/material.service';
+import { AcabamentoService } from '../services/acabamento.service';
+import { Acabamento } from '../model/Acabamento';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-materiais',
@@ -10,8 +13,12 @@ import { MaterialService } from '../services/material.service';
 })
 export class MaterialComponent implements OnInit {
   materiais: Material[];
+  acabamentos: Acabamento[];
+  aca: Acabamento;
+  mat: Material;
+ 
 
-  constructor(private materialService: MaterialService) { }
+  constructor(private materialService: MaterialService, private acabamentoService: AcabamentoService) { }
 
   ngOnInit() {
     this.getMateriais();
@@ -20,8 +27,12 @@ export class MaterialComponent implements OnInit {
   getMateriais(): void {
     this.materialService.getMateriais()
       .subscribe(materiais => this.materiais = materiais);
+    this.acabamentoService.getAcabamentos().subscribe(acabamentos => this.acabamentos = acabamentos)
   }
   add(nome: string): void {
+    //this.mat.nome = nome;
+   // this.acabamentoService.getAcabamento(id).subscribe(acabamento => this.aca = acabamento);
+   // this.mat.acabamento = this.aca;
 
     if (!nome) { return; }
     this.materialService.addMaterial({ nome } as Material)

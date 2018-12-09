@@ -8,6 +8,7 @@ import { AcabamentosComponent } from './acabamentos/acabamentos.component';
 import { CategoriasComponent } from './categorias/categorias.component';
 import { ItensComponent } from './itens/itens.component';
 import { MaterialComponent } from './material/material.component';
+import { ItemDetailsComponent } from './item-details/item-details.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
@@ -17,7 +18,8 @@ const routes: Routes = [
   { path: 'acabamentos', component: AcabamentosComponent },
   { path: 'categorias', component: CategoriasComponent },
   { path: 'itens', component: ItensComponent },
-  { path: 'materiais', component: MaterialComponent }
+  { path: 'materiais', component: MaterialComponent },
+  { path: 'itens/:id', component: ItemDetailsComponent }
 ];
 
 @NgModule({

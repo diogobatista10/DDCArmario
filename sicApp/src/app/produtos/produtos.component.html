@@ -30,19 +30,19 @@
               </div>
               <div class="form-group">
                 <label class="text-white" for="exampleFormControlSelect1">Selecione uma categoria</label>
-                <select class="form-control text-muted" [(ngModel)]="objValue">
+                <select class="form-control text-muted" [(ngModel)]="categorias">
                   <option *ngFor="let categoria of categorias" [ngValue]="categoria"> {{categoria.nome}}</option>
                 </select>
               </div>
               <div class="form-group">
                 <label class="text-white" for="exampleFormControlSelect2">Selecione Materiais</label>
-                <select class="form-control text-muted" [(ngModel)]="objValue">
+                <select class="form-control text-muted" [(ngModel)]="materiais">
                   <option *ngFor="let material of materiais" [ngValue]="material"> {{material.nome}}</option>
                 </select>
               </div>
               <div class="form-group">
                 <label class="text-white" for="exampleFormControlSelect2">Selecione Acabamentos</label>
-                <select class="form-control text-muted" [(ngModel)]="objValue">
+                <select class="form-control text-muted" [(ngModel)]="acabamentos">
                   <option *ngFor="let acabamento of acabamentos" [ngValue]="acabamento"> {{acabamento.nome}}</option>
                 </select>
               </div>
