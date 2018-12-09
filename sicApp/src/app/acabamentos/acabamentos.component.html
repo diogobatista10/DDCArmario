@@ -1,0 +1,51 @@
+<div class="container">
+  <div class="row">
+
+
+    <div class="col-lg bg-info mt-1 ml-1 rounded">
+      <div class="card bg-info">
+        <div class="card-header ">
+          <h2 class=" text-center text-white">Novo Acabamento</h2>
+        </div>
+        <div class="card-body">
+          <form>
+            <div class="form-group">
+              <label class="text-white">Nome do Acabamento</label>
+              <input type="text" class="form-control" #acabamentoName placeholder="Acabamento xpto">
+            </div>
+           
+            <button class="btn btn-success btn-lg ml-1 mb-1 mt-1" (click)="add(acabamentoName.value); acabamentoName.value=''">
+              Adicionar
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg bg-info ml-1 mt-1 rounded">
+      <div class="card bg-info">
+        <div class="card-header ">
+          <h2 class=" text-center text-white">Acabamentos</h2>
+        </div>
+        <div class="card-body">
+          <ul class="list-group list-group-flush" style="background-color: #a33f1f;">
+            <li class="list-group-item bg-info" *ngFor="let acabamento of acabamentos">
+              <a class="list-group-item text-muted rounded" routerLink="/detail/{{acabamento.id}}">
+                {{acabamento.nome}}
+              </a>
+              <button type="button" class="btn btn-danger mt-1" title="delete acabamento"
+                      (click)="delete(acabamento)">
+                Remover
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+

@@ -1,0 +1,106 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container">
+  <nav id="nav_main" class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">
+      <img src="assets/img/angular-logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+      Arqsi Armarios
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home </a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Produtos
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" routerLink="/produtos">Ver</a>
+            <a class="dropdown-item" href="#">Criar novo</a>
+            <a class="dropdown-item" href="#">Editar</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Remover</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Materiais
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/materiais">Ver</a>
+            <a class="dropdown-item" href="#">Criar novo</a>
+            <a class="dropdown-item" href="#">Editar</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Remover</a>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Acabamentos
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/acabamentos">Ver</a>
+            <a class="dropdown-item" href="#">Criar novo</a>
+            <a class="dropdown-item" href="#">Editar</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Remover</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Categorias
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/categorias">Ver</a>
+            <a class="dropdown-item" href="#">Criar novo</a>
+            <a class="dropdown-item" href="#">Editar</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Remover</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Itens
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/itens">Ver</a>
+            <a class="dropdown-item" href="#">Criar novo</a>
+            <a class="dropdown-item" href="#">Editar</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Remover</a>
+          </div>
+        </li>
+       
+      </ul>
+
+    </div>
+  </nav>
+</div>
+
+<div class="container mt-5">
+  <div class="text-center mt-2">
+
+    <h1 class="mt-3" style="color:#17a2b8;">
+      {{ title }}
+    </h1>
+    <img width="600" height="500" alt="Angular Logo" src="assets/img/angular-logo.png">
+
+  </div>
+</div>
+<router-outlet></router-outlet>
+<!--
+<app-produto-search></app-produto-search>
+<app-produto-detail></app-produto-detail>
+<app-produtos></app-produtos>
+<app-messages></app-messages>
+<app-acabamentos></app-acabamentos>
+<app-categorias></app-categorias>
+<app-materiais></app-materiais>
+
+<app-encomendas></app-encomendas>
+    -->

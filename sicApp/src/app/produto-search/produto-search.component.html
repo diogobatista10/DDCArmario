@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div id="search-component" class="col-md text-center bg-info mb-1 ml-1 rounded">
+      <h4 class="text-white">Produto Search</h4>
+
+      <input #searchBox id="search-box" (input)="search(searchBox.value)" />
+
+      <ul class="search-result">
+        <li *ngFor="let produto of produtos$ | async">
+          <a routerLink="/detail/{{produto.id}}">
+            {{produto.nome}}
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

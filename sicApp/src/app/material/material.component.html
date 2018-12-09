@@ -1,0 +1,58 @@
+<div class="container">
+  <div class="row">
+
+
+    <div class="col-lg bg-info mt-1 ml-1 rounded">
+      <div class="card bg-info">
+        <div class="card-header ">
+          <h2 class=" text-center text-white">Novo Material</h2>
+        </div>
+        <div class="card-body">
+          <form>
+            <div class="form-group">
+              <label class="text-white">Nome do Material</label>
+              <input type="text" class="form-control" #materialName placeholder="Material xpto">
+            </div>
+            <div class="form-group">
+              <label class="text-white" for="exampleFormControlSelect1">Selecione um acabamento</label>
+              <select class="form-control text-muted" id="exampleFormControlSelect1">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+
+            <button class="btn btn-success btn-lg ml-1 mb-1 mt-1" (click)="add(categoriaName.value); categoriaName.value=''">
+              Adicionar
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+        <div class="col-lg bg-info ml-1 mt-1 rounded">
+          <div class="card bg-info">
+            <div class="card-header ">
+              <h2 class=" text-center text-white">Materiais</h2>
+            </div>
+            <div class="card-body">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item bg-info" *ngFor="let material of materiais" style="background-color: #a33f1f;">
+                  <a class="list-group-item text-muted" routerLink="/detail/{{material.id}}">
+                    {{material.nome}}
+                  </a>
+                  <button class="btn btn-danger mt-1" title="delete material"
+                      (click)="delete(material)">
+                Remover
+              </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+

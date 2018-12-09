@@ -1,0 +1,54 @@
+<div class="container">
+  <div class="row">
+
+
+    <div class="col-sm">
+      <h2 class="display-2 text-center text-secondary">Novo Item</h2>
+
+
+      <form>
+        <div class="form-group">
+          <label class="text-muted">Nome do Item</label>
+          <input type="text" class="form-control" #itemName placeholder="Item xpto">
+        </div>
+        <div class="form-group">
+          <label class="text-muted" for="exampleFormControlSelect1">Selecione um produto</label>
+          <select class="form-control text-muted" id="exampleFormControlSelect1">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        </div>
+
+        <button class="btn btn-primary ml-1 " (click)="add(itemName.value); itemName.value=''">
+          Adicionar
+        </button>
+      </form>
+    </div>
+
+    <div class="col-sm ">
+      <div>
+        <h2 class="display-2 text-center text-secondary">Itens </h2>
+        <ul class="list-group list-group-flush" style="background-color: #a33f1f;">
+          <li class="list-group-item" *ngFor="let item of itens" style="background-color: #a33f1f;">
+            <a class="list-group-item text-muted" routerLink="/detail/{{item.id}}">
+              {{item.produto}}
+              {{item.material}}
+              {{item.acabamento}}
+              
+            </a>
+            <button class="btn-danger" title="delete item"
+                    (click)="delete(item)">
+              Remover
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
